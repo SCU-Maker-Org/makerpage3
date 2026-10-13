@@ -293,7 +293,8 @@ window.addEventListener('load', () => {
       const leftRoom = nebulaCenterX / radiusX;
       const rightRoom = (width - nebulaCenterX) / (radiusX * 1.28);
       const verticalRoom = Math.min(nebulaCenterY, height - nebulaCenterY) / radiusY;
-      nebulaZoom = Math.max(1, Math.min(galaxyZoom, leftRoom, rightRoom, verticalRoom));
+      const mobileZoom = Math.max(.62, Math.min(1, width / 500));
+      nebulaZoom = Math.min(mobileZoom, galaxyZoom, leftRoom, rightRoom, verticalRoom);
       twinklers = [];
       streams = [];
 
