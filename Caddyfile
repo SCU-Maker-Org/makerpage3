@@ -1,0 +1,5 @@
+:5090 {
+	root * /srv
+	file_server
+	encode gzip
+}
